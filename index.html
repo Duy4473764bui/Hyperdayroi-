@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chúc mừng 8/3 ✦</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<canvas id="petals"></canvas>
+
+<section class="dark reveal">
+<div class="hero-number">8 / 3</div>
+<div class="hero-sub">
+Ngày của những điều tuyệt vời nhất
+</div>
+</section>
+
+<section class="light reveal">
+
+<div style="letter-spacing:4px;font-size:14px;margin-bottom:30px">
+— LỜI TỪ TRÁI TIM —
+</div>
+
+<div class="quote">
+Bạn không cần phải hoàn hảo<br>
+để trở nên <span class="accent">phi thường</span>.
+</div>
+
+<p style="margin-top:20px">
+Chúc mừng ngày 8 tháng 3
+</p>
+
+</section>
+
+<section class="dark reveal">
+
+<h1>Vì bạn xứng đáng.</h1>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-number">01</div>
+<h3>Mạnh mẽ & dịu dàng</h3>
+<p>
+Bạn mang trong mình sức mạnh của ngàn ngọn núi,
+và sự ấm áp của ánh bình minh.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">02</div>
+<h3>Truyền cảm hứng</h3>
+<p>
+Chỉ cần hiện diện, bạn đã khiến thế giới xung quanh trở nên tốt đẹp hơn.
+</p>
+</div>
+
+<div class="card">
+<div class="card-number">03</div>
+<h3>Không thể thay thế</h3>
+<p>
+Trong vũ trụ rộng lớn này, chỉ có một bạn —
+và điều đó thật kỳ diệu.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="light reveal">
+
+<h1 class="accent">
+Cảm ơn vì đã là bạn
+</h1>
+
+<p>
+Với tất cả yêu thương · 8 tháng 3
+</p>
+
+<div class="flowers">
+🌸 🌺 🌹 🌼 🌸
+</div>
+
+<div class="credit">
+MADE WITH LOVE<br>
+Made by <b>Hyper</b>
+</div>
+
+</section>
+
+<section class="light reveal">
+
+<h1>
+Chúc mừng <span class="accent">8 tháng 3</span>
+</h1>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>top:0;
+left:0;
+pointer-events:none;
+z-index:1;
+}
+
+/* responsive */
+
+@media(max-width:700px){
+
+h1{
+font-size:46px;
+}
+
+.hero-number{
+font-size:80px;
+}
+
+.quote{
+font-size:30px;
+}
+
+}
+
+</style></head><body><canvas id="petals"></canvas>
+
+<!-- HERO --><section class="dark reveal"><div class="hero-number">8 / 3</div><div class="hero-sub">
+Ngày của những điều tuyệt vời nhất
+</div></section><!-- QUOTE --><section class="light reveal"><div style="letter-spacing:4px;font-size:14px;margin-bottom:30px">
+— LỜI TỪ TRÁI TIM —
+</div><div class="quote">
+Bạn không cần phải hoàn hảo<br>
+để trở nên <span class="accent">phi thường</span>.
+</div><p style="margin-top:20px">
+Chúc mừng ngày 8 tháng 3
+</p></section><!-- WHY YOU DESERVE --><section class="dark reveal"><h1>Vì bạn xứng đáng.</h1><div class="cards"><div class="card"><div class="card-number">01</div><h3>Mạnh mẽ & dịu dàng</h3><p>
+Bạn mang trong mình sức mạnh của ngàn ngọn núi,
+và sự ấm áp của ánh bình minh.
+</p></div><div class="card"><div class="card-number">02</div><h3>Truyền cảm hứng</h3><p>
+Chỉ cần hiện diện, bạn đã khiến thế giới xung quanh trở nên tốt đẹp hơn.
+</p></div><div class="card"><div class="card-number">03</div><h3>Không thể thay thế</h3><p>
+Trong vũ trụ rộng lớn này, chỉ có một bạn —
+và điều đó thật kỳ diệu.
+</p></div></div></section><!-- THANK YOU --><section class="light reveal"><h1 class="accent">
+Cảm ơn vì đã là bạn
+</h1><p>
+Với tất cả yêu thương · 8 tháng 3
+</p><div class="flowers">
+🌸 🌺 🌹 🌼 🌸
+</div><div class="credit">
+MADE WITH LOVE<br>
+Made by <b>Hyper</b>
+</div></section><!-- FINAL --><section class="light reveal"><h1>
+Chúc mừng <span class="accent">8 tháng 3</span>
+</h1></section><script>
+
+/* scroll reveal */
+
+const reveals=document.querySelectorAll(".reveal");
+
+function reveal(){
+
+const windowHeight=window.innerHeight;
+
+reveals.forEach(el=>{
+
+const top=el.getBoundingClientRect().top;
+
+if(top < windowHeight-120){
+el.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll",reveal);
+reveal();
+
+
+/* petals animation */
+
+const canvas=document.getElementById("petals");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+}
+
+resize();
+window.addEventListener("resize",resize);
+
+let petals=[];
+
+for(let i=0;i<60;i++){
+
+petals.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+
+r:Math.random()*4+2,
+
+speedY:Math.random()*1+0.3,
+speedX:Math.random()*0.5-0.25
+
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+petals.forEach(p=>{
+
+p.y+=p.speedY;
+p.x+=p.speedX;
+
+if(p.y>canvas.height){
+p.y=-10;
+p.x=Math.random()*canvas.width;
+}
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="#e8a898";
+ctx.fill();
+
+});
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+</script></body>
+</html>
